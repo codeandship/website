@@ -1,0 +1,70 @@
+# Translations for German
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# Single.html
+
+[Written]
+other = "Geschrieben"
+
+[by]
+other = "von"
+
+[with]
+other = "mit"
+
+[on]
+other = "am"
+
+[in]
+other = "in"
+
+[Author]
+other = "Autor"
+
+[Words]
+other = "Wörter"
+
+[Tag]
+other = "Kategorie"
+
+[Home]
+other = "Home"
+
+[back]
+other = "Zurück"
+
+[minute]
+other = "minute"
+
+[Share]
+other = "Teilen"
+
+# 404.html
+
+[page]
+other = "Seite"
+
+[not]
+other = "nicht"
+
+[found]
+other = "gefunden"
+
+[return]
+other = "zurück"
+
+[to]
+other = "zu"
+
+# Pagination
+
+[More]
+other = "mehr"
+
+# Related post
+
+[Related]
+other = "Ähnliche"
+
+[Articles]
+other = "Artikel"
