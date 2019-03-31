@@ -26,7 +26,7 @@
     <itunes:author>"Code And Ship"</itunes:author>
     <itunes:owner>
         <itunes:name>"{{ .Title }}"</itunes:name>
-        <itunes:email>"moin@codeandship.rocks"</itunes:email>
+        <itunes:email>"feedback@codeandship.rocks"</itunes:email>
     </itunes:owner>
     <itunes:block>no</itunes:block>
     <itunes:explicit>no</itunes:explicit>
