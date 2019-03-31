@@ -1,3 +1,4 @@
 author = "Ingmar && Jonathan"
 since = "2019"
 home_mode = "post"
+dateFormatToUse = "02.01.2006"
