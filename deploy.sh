@@ -2,6 +2,9 @@
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
+cd public
+git pull origin master
+
 # Build the project.
 hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
 
