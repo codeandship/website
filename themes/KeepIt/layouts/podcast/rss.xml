@@ -8,25 +8,25 @@
      xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
      xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>{{ .Site.Title }} {{ .Title }}</title>
+    <title>{{ .Site.Title }} Podcast</title>
     <atom:link href="{{ .Site.BaseURL }}index.xml" rel="self" type="application/rss+xml" />
     <link>{{ .Site.BaseURL }}</link>
-    <description>Recent content {{ with .Title }}in {{.}} {{ end }}on {{ .Site.Title }}</description>
+    <description>Ein Podcast übers programmieren und ausliefern von Software Projekten.</description>
     <lastBuildDate>{{ .Date }}</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en</language>
     <copyright>{{ with .Site.Copyright }}{{.}}{{ end }}</copyright>
     <itunes:new-feed-url>{{ .Site.BaseURL }}podcast/index.xml</itunes:new-feed-url>
-    <itunes:subtitle>"This is a subtitle"</itunes:subtitle>
-    <itunes:summary>"This is the podcast description"</itunes:summary>
+    <itunes:subtitle>Ein Podcast übers programmieren und ausliefern von Software Projekten.</itunes:subtitle>
+    <itunes:summary></itunes:summary>
     <itunes:category text="Technology">
         <itunes:category text="Developers" />
     </itunes:category>
-    <itunes:author>"Code And Ship"</itunes:author>
+    <itunes:author>{{ .Site.Title }}</itunes:author>
     <itunes:owner>
-        <itunes:name>"{{ .Title }}"</itunes:name>
-        <itunes:email>"feedback@codeandship.rocks"</itunes:email>
+        <itunes:name>{{ .Site.Title }}</itunes:name>
+        <itunes:email>feedback@codeandship.rocks</itunes:email>
     </itunes:owner>
     <itunes:block>no</itunes:block>
     <itunes:explicit>no</itunes:explicit>
