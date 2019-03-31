@@ -42,7 +42,8 @@
         <guid>{{ .Params.mp3 }}</guid>
 
         <itunes:author>{{ .Params.author }}</itunes:author>
-        {{ `<itunes:summary type="html"><![CDATA[` | safeHTML }}{{ htmlUnescape .Content | safeHTML }}]]>></itunes:summary>
+        <itunes:summary>{{ htmlUnescape .Content | plainify | truncate 200 }}</itunes:summary>
+        {{ `<content:encoded><![CDATA[` | safeHTML }}{{ htmlUnescape .Content | safeHTML }}]]>></content:encoded>
         <itunes:image href="https://via.placeholder.com/150" />
         <itunes:duration>{{ .Params.duration }}</itunes:duration>
         <itunes:keywords>{{ .Params.tags }}</itunes:keywords>
