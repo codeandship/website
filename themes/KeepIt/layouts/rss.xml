@@ -42,7 +42,7 @@
         <guid>{{ .Params.mp3 }}</guid>
 
         <itunes:author>{{ .Params.author }}</itunes:author>
-        <itunes:summary><![CDATA[{{ .Content | html }}]]></itunes:summary>
+        {{ `<itunes:summary type="html"><![CDATA[` | safeHTML }}{{ htmlUnescape .Content | safeHTML }}]]>></itunes:summary>
         <itunes:image href="https://via.placeholder.com/150" />
         <itunes:duration>{{ .Params.duration }}</itunes:duration>
         <itunes:keywords>{{ .Params.tags }}</itunes:keywords>
