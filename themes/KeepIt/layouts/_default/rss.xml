@@ -9,7 +9,7 @@
      xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}</title>
-    <atom:link href="{{ .Site.BaseURL }}index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="{{ .Site.BaseURL }}/index.xml" rel="self" type="application/rss+xml" />
     <link>{{ .Site.BaseURL }}</link>
     <description>Recent content {{ with .Title }}in {{.}} {{ end }}on {{ .Site.Title }}</description>
     <lastBuildDate>{{ .Date }}</lastBuildDate>
@@ -17,7 +17,7 @@
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en</language>
     <copyright>{{ with .Site.Copyright }}{{.}}{{ end }}</copyright>
-    <itunes:new-feed-url>{{ .Site.BaseURL }}podcast/index.xml</itunes:new-feed-url>
+    <itunes:new-feed-url>{{ .Site.BaseURL }}/podcast/index.xml</itunes:new-feed-url>
     <itunes:subtitle>"This is a subtitle"</itunes:subtitle>
     <itunes:summary>"This is the podcast description"</itunes:summary>
     <itunes:category text="Technology">
@@ -30,7 +30,7 @@
     </itunes:owner>
     <itunes:block>no</itunes:block>
     <itunes:explicit>no</itunes:explicit>
-    <itunes:image href="https://via.placeholder.com/150" />
+    <itunes:image href="/cover.jpg" />
     {{ range first 15 .Data.Pages }}
     <item>
         <link>{{ .Permalink }}</link>
@@ -43,7 +43,7 @@
 
         <itunes:author>{{ .Params.author }}</itunes:author>
         <itunes:summary>{{ .Content | html }}</itunes:summary>
-        <itunes:image href="https://via.placeholder.com/150" />
+        <itunes:image href="/cover.jpg" />
         <itunes:duration>{{ .Params.duration }}</itunes:duration>
         <itunes:keywords>{{ .Params.tags }}</itunes:keywords>
     </item>
