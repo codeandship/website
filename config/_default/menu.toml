@@ -8,7 +8,7 @@
     url = "/podcast"
     weight = 1
 
-[[main]]
-    name = "About"
-    url = "/about"
-    weight = 4
+#[[main]]
+#    name = "About"
+#    url = "/about"
+#    weight = 4
