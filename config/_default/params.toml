@@ -1,4 +1,10 @@
 author = "Ingmar && Jonathan"
+subtitle = "Ein Podcast übers programmieren und ausliefern von Software Projekten."
+avatar = "/cover-no-text.jpg"
 since = "2019"
-home_mode = "post"
+#home_mode = "post"
 dateFormatToUse = "02.01.2006"
+
+[Social]
+Github = "codeandship"
+Twitter = "codeandship"
