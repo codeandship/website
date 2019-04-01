@@ -5,6 +5,7 @@ draft: false
 mp3: https://cdn.codeandship.rocks/cas_001.mp3
 length: 73696079
 duration: 01:16:40
+Description: Herzlich Willkommen zu unserem Podcast! In der ersten Folge geht es um die Programmiersprache Go. Dabei gehen wir darauf ein, was Go für Vor- und Nacherteile gegenüber etablierteren Sprachen hat.
 ---
 **Herzlich Willkommen zu unserem Podcast!**  
 In der ersten Folge geht es um die Programmiersprache Go.
