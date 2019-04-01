@@ -56,6 +56,14 @@
         {{ $finalContent }}
     </div>
 
+    <div class="post-copyright">
+        <p class="copyright-item">
+            {{ if $.Param "socialShare" }}
+            <span>{{ i18n "Share" }}:</span>
+            <span>{{ partial "share-links" . }}</span>
+        </p>
+        {{ end }}
+    </div>
 
     <div class="post-tags">
         {{ with .Params.tags }}
