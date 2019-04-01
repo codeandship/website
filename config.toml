@@ -2,6 +2,6 @@ baseURL = "/"
 languageCode = "de"
 defaultContentLanguage = "de"
 title = "CodeAndShip"
-theme = "keepit"
+theme = "CodeAndShip"
 publishDir = "public"
 
