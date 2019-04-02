@@ -10,16 +10,16 @@
   <channel>
     <title>{{ .Site.Title }} Podcast</title>
     <atom:link href="{{ .Site.BaseURL }}index.xml" rel="self" type="application/rss+xml" />
-    <link>{{ .Site.BaseURL }}</link>
+    <link>https://codeandship.rocks</link>
     <description>Ein Podcast übers programmieren und ausliefern von Software Projekten.</description>
     <lastBuildDate>{{ .Date }}</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en</language>
     <copyright>{{ with .Site.Copyright }}{{.}}{{ end }}</copyright>
-    <itunes:new-feed-url>{{ .Site.BaseURL }}podcast/index.xml</itunes:new-feed-url>
-    <itunes:subtitle>Ein Podcast übers programmieren und ausliefern von Software Projekten.</itunes:subtitle>
-    <itunes:summary></itunes:summary>
+    <!-- <itunes:new-feed-url>{{ .Site.BaseURL }}podcast/index.xml</itunes:new-feed-url> -->
+    <itunes:subtitle>mit Jonathan && Ingmar</itunes:subtitle>
+    <itunes:summary>Ein Podcast übers programmieren und ausliefern von Software Projekten.</itunes:summary>
     <itunes:category text="Technology">
         <itunes:category text="Developers" />
     </itunes:category>
