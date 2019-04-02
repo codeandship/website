@@ -4,6 +4,7 @@ avatar = "/cover-no-text.jpg"
 since = "2019"
 #home_mode = "post"
 dateFormatToUse = "02.01.2006"
+cdnURL = "https://cdn.codeandship.rocks"
 
 [Social]
 Github = "codeandship"

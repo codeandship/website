@@ -10,7 +10,7 @@
   <channel>
     <title>{{ .Site.Title }} Podcast</title>
     <atom:link href="{{ .Site.BaseURL }}index.xml" rel="self" type="application/rss+xml" />
-    <link>https://codeandship.rocks</link>
+    <link>{{.Site.BaseURL}}</link>
     <description>Ein Podcast übers programmieren und ausliefern von Software Projekten.</description>
     <lastBuildDate>{{ .Date }}</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
@@ -18,7 +18,7 @@
     <language>en</language>
     <copyright>{{ with .Site.Copyright }}{{.}}{{ end }}</copyright>
     <!-- <itunes:new-feed-url>{{ .Site.BaseURL }}podcast/index.xml</itunes:new-feed-url> -->
-    <itunes:subtitle>mit Jonathan && Ingmar</itunes:subtitle>
+    <itunes:subtitle>mit Jonathan und Ingmar</itunes:subtitle>
     <itunes:summary>Ein Podcast übers programmieren und ausliefern von Software Projekten.</itunes:summary>
     <itunes:category text="Technology">
         <itunes:category text="Developers" />
@@ -30,10 +30,10 @@
     </itunes:owner>
     <itunes:block>no</itunes:block>
     <itunes:explicit>no</itunes:explicit>
-    <itunes:image href="https://codeandship.rocks/cover.jpg" />
+    <itunes:image href="{{"cover.jpg"| absURL }}" />
     {{ range first 15 .Data.Pages }}
     <item>
-        <link>{{ .Permalink | absURL }}</link>
+        <link>{{ .Permalink }}</link>
         <title>{{ .Title }}</title>
         <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
         <description>{{ .Params.summary }}</description>
@@ -44,7 +44,7 @@
         <itunes:author>{{ .Params.author }}</itunes:author>
         <itunes:summary>{{ htmlUnescape .Content | plainify | truncate 200 }}</itunes:summary>
         {{ `<content:encoded><![CDATA[` | safeHTML }}{{ htmlUnescape .Content | safeHTML }}]]></content:encoded>
-        <itunes:image href="https://codeandship.rocks/cover.jpg" />
+        <itunes:image href="{{"cover.jpg"| absURL }}" />
         <itunes:duration>{{ .Params.duration }}</itunes:duration>
         <itunes:keywords>{{ .Params.tags }}</itunes:keywords>
     </item>
