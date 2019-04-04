@@ -1,7 +1,7 @@
 baseURL = "https://codeandship.rocks"
 languageCode = "de"
 defaultContentLanguage = "de"
-title = "CodeAndShip"
+title = "Code and Ship"
 theme = "CodeAndShip"
 publishDir = "public"
 
