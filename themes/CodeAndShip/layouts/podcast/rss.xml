@@ -30,7 +30,7 @@
     </itunes:owner>
     <itunes:block>no</itunes:block>
     <itunes:explicit>no</itunes:explicit>
-    <itunes:image href="https://codeandship.rocks/cover.jpg" />
+    <itunes:image href="{{"cover.jpg"| absURL }}" />
     {{ range first 15 .Data.Pages }}
     <item>
         <link>{{ .Permalink }}</link>
@@ -44,7 +44,7 @@
         <itunes:author>{{ .Params.author }}</itunes:author>
         <itunes:summary>{{ htmlUnescape .Content | plainify | truncate 200 }}</itunes:summary>
         {{ `<content:encoded><![CDATA[` | safeHTML }}{{ htmlUnescape .Content | safeHTML }}]]></content:encoded>
-        <itunes:image href="https://codeandship.rocks/cover.jpg" />
+        <itunes:image href="{{"cover.jpg"| absURL }}" />
         <itunes:duration>{{ .Params.duration }}</itunes:duration>
         <itunes:keywords>{{ .Params.tags }}</itunes:keywords>
     </item>
