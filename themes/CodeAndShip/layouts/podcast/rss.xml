@@ -17,7 +17,6 @@
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en</language>
     <copyright>{{ with .Site.Copyright }}{{.}}{{ end }}</copyright>
-    <itunes:new-feed-url>{{ .Site.BaseURL }}/podcast/index.xml</itunes:new-feed-url>
     <itunes:subtitle>Ein Techpodcast aus Bremen von Ingmar und Jonathan</itunes:subtitle>
     <itunes:summary>Jonathan und Ingmar sprechen übers Programmieren und Ausliefern von Software Projekten. Außerdem tauschen die beiden Bremer sich über Tools, Framewoks und das Leben als Softwareentwickler aus.</itunes:summary>
     <itunes:category text="Technology">
