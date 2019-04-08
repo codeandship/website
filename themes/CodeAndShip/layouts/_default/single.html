@@ -1,6 +1,7 @@
 {{ define "content" -}}
 {{ $cdn_url := .Scratch.Get "cdn_url" }}
 {{ partial "default-head.html" . }}
+<script src="https://cdn.podlove.org/web-player/embed.js"></script>
 <article class="post-warp">
     <header class="post-header">
         <h1 class="post-title">{{ .Title }}</h1>
@@ -29,10 +30,35 @@
             {{.ReadingTime }} min
         </div>
     </header>
-    <audio controls>
-        <source src="{{ .Params.mp3 }}" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <br/>
+    <div id="podcast-player"></div>
+    <script>
+        podlovePlayer('#podcast-player', {
+            show: {
+                title: '{{.Site.Title}}',
+                subtitle: 'Menschen! Technik! Sensationen!',
+                
+                link: '{{.Site.BaseURL }}'
+            },
+            title: '{{ .Title }}',
+            duration: '{{.Params.duration}}', // Simple time format
+            link: '{{ .Permalink }}',
+            poster: '{{"cover.jpg"| absURL }}',
+            audio: [{
+                url: '{{ .Params.mp3 }}',
+                mimeType: 'audio/mp3',
+                size: {{.Params.length }},
+            title: 'Audio MP3'
+            }],
+            theme: {
+                main: '#06969B',
+                highlight: '#fff'
+            },
+            tabs: {
+                info: false
+            }
+        });
+    </script>
     <div class="post-content">
         <!--featured_image-->
 
