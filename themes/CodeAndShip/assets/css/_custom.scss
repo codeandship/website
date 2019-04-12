@@ -2,3 +2,15 @@
 // Custom style
 // ==============================
 // You can override the variables in _variables.scss to customize the style
+
+.slim-head {
+    text-align: center;
+    margin-top: 1.5em;
+    h1{
+        font-weight: 100;
+    }
+}
+
+.subscribe {
+    margin-bottom: 1.5em;
+}
