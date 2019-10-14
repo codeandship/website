@@ -1,7 +1,7 @@
 {{ partial "default-head.html" . }}
 {{ $cdn_url := .Scratch.Get "cdn_url" }}
 <div class="post-warp">
-  {{ $paginator := .Paginate (where .Data.Pages "Type" "podcast") }} {{ range $paginator.Pages }}
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "podcast") }} {{ range $paginator.Pages }}
   <article class="post" itemscope itemscope="" itemtype="http://schema.org/Article">
 
     <header class="post-header">
