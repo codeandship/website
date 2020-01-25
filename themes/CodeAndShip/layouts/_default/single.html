@@ -30,14 +30,14 @@
             {{.ReadingTime }} min
         </div>
     </header>
-    <br/>
+    <br />
     <div id="podcast-player"></div>
     <script>
         podlovePlayer('#podcast-player', {
             show: {
                 title: '{{.Site.Title}}',
                 subtitle: 'Ein Techpodcast aus Bremen von Ingmar und Jonathan',
-                
+
                 link: '{{.Site.BaseURL }}'
             },
             title: '{{ .Title }}',
@@ -51,12 +51,12 @@
             title: 'Audio MP3'
             }],
             theme: {
-                main: '#06969B',
-                highlight: '#fff'
-            },
+            main: '#222',
+            highlight: '#fff'
+        },
             tabs: {
-                info: false
-            }
+            info: false
+        }
         });
     </script>
     <div class="post-content">
@@ -103,7 +103,7 @@
         {{ end }}
         <section>
             <!-- <a href="javascript:window.history.back();">{{ i18n "back" }}</a></span> · -->
-            <span><a class="btn" href="{{ .Site.BaseURL }}">{{ i18n "Home" }}</a></span>
+            <span><a class="btn btn-home" href="{{ .Site.BaseURL }}">{{ i18n "Home" }}</a></span>
         </section>
     </div>
 
