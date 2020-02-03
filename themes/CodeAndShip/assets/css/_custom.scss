@@ -3,6 +3,28 @@
 // ==============================
 // You can override the variables in _variables.scss to customize the style
 
+body {
+    background: #262626;
+    color: #fff;
+}
+
+a {
+    color:#fff;
+}
+
+.post-warp .post-meta {
+    color: #bbb !important;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.intro .avatar img {
+    display: none;
+}
+
 .slim-head {
     text-align: center;
     margin-top: 1.5em;
@@ -19,5 +41,31 @@
 pre {
     border: 1px solid #ddd;
     border-radius: 3px;
-    background-color: #fafafa;
+    background-color: #575757;
+}
+
+code {
+    color: black;
+}
+
+.post-warp .post {
+    border-bottom: 1px dashed #555;
+}
+
+.btn-home {
+    color:white;
+    border-color: white;
+}
+
+.post-tags section .btn-home{
+    color:white;
+}
+
+
+.pagination li.active a, .pagination li a:hover {
+    color: white;
+}
+
+.pagination li:after, .pagination li:before {
+    background-color: white;
 }
