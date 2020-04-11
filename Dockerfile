@@ -2,44 +2,15 @@
 # Twitter:      https://twitter.com/gohugoio
 # Website:      https://gohugo.io/
 
-FROM golang:1.13-alpine AS build
+FROM klakegg/hugo AS build
 
-# Optionally set HUGO_BUILD_TAGS to "extended" when building like so:
-#   docker build --build-arg HUGO_BUILD_TAGS=extended .
-ARG HUGO_BUILD_TAGS
+WORKDIR /web
 
-ARG CGO=1
-ENV CGO_ENABLED=${CGO}
-ENV GOOS=linux
-ENV GO111MODULE=on
+COPY . /web
+RUN hugo version
+RUN hugo -d /web/public && ls -la /web/public && ls -la /web
 
-WORKDIR /go/src/github.com/gohugoio/hugo
+FROM nginx:alpine 
 
-COPY . /go/src/github.com/gohugoio/hugo/
-
-# gcc/g++ are required to build SASS libraries for extended version
-RUN apk update && \
-    apk add --no-cache gcc g++ musl-dev && \
-    go get github.com/magefile/mage
-
-RUN mage hugo && mage install
-
-# ---
-
-FROM alpine:3.11
-
-COPY --from=build /go/bin/hugo /usr/bin/hugo
-
-# libc6-compat & libstdc++ are required for extended SASS libraries
-# ca-certificates are required to fetch outside resources (like Twitter oEmbeds)
-RUN apk update && \
-    apk add --no-cache ca-certificates libc6-compat libstdc++ git
-
-VOLUME /site
-WORKDIR /site
-
-# Expose port for live server
-EXPOSE 1313
-
-ENTRYPOINT ["hugo"]
-CMD ["--help"]
+RUN rm -rf /usr/share/nginx/html/*
+COPY --from=build /web/public /usr/share/nginx/html/
