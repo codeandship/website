@@ -41,7 +41,12 @@ a {
 pre {
     border: 1px solid #ddd;
     border-radius: 3px;
-    background-color: #575757;
+    background-color: rgb(36, 36, 36) !important;
+}
+
+pre code {
+
+    color: #ddd;
 }
 
 code {
@@ -62,10 +67,11 @@ code {
 }
 
 
-.pagination li.active a, .pagination li a:hover {
-    color: white;
+.pagination li.active a, .pagination li a:hover,
+.pagination li:hover a {
+    color: white !important;
 }
 
 .pagination li:after, .pagination li:before {
-    background-color: white;
+    background-color: white !important;
 }
