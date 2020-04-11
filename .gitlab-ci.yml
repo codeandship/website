@@ -1,14 +1,13 @@
-
 variables:
     CONTAINER_NAME: $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID
     CONTAINER_LATEST: $CI_REGISTRY_IMAGE:latest
     CONTAINER_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
   
-  stages:
+stages:
     - build
     - build-docker
     - deploy
-  
+      
 
 build-docker-master:
     stage: build-docker
