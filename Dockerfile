@@ -8,7 +8,7 @@ WORKDIR /web
 
 COPY . /web
 RUN hugo version
-RUN hugo -d /web/public && ls -la /web/public && ls -la /web
+RUN hugo clean && hugo -d /web/public && ls -la /web/public && ls -la /web
 
 FROM nginx:alpine 
 
