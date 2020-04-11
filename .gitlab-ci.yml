@@ -16,7 +16,7 @@ build-docker-master:
         - docker
     script:
         - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
-        - docker build --pull --build-arg mode=staging -t $CONTAINER_NAME .
+        - docker build --no-cache --pull --build-arg mode=staging -t $CONTAINER_NAME .
         - docker tag $CONTAINER_NAME $CONTAINER_LATEST
         - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
         - docker push $CONTAINER_LATEST
