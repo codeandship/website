@@ -1,0 +1,35 @@
+
+variables:
+    CONTAINER_NAME: $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID
+    CONTAINER_LATEST: $CI_REGISTRY_IMAGE:latest
+    CONTAINER_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
+  
+  stages:
+    - build
+    - build-docker
+    - deploy
+  
+
+build-docker-master:
+    stage: build-docker
+    tags:
+        - docker
+    script:
+        - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+        - docker build --pull --build-arg mode=staging -t $CONTAINER_NAME .
+        - docker tag $CONTAINER_NAME $CONTAINER_LATEST
+        - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+        - docker push $CONTAINER_LATEST
+    only:
+        - master
+      
+deploy-master:
+    stage: deploy
+    tags:
+        - deploy
+    script:
+        - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+        - docker service update --image $CONTAINER_LATEST --detach=false --with-registry-auth codeandship_web
+    only:
+        - master
+    
