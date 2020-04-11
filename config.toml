@@ -5,3 +5,7 @@ title = "Code and Ship"
 theme = "CodeAndShip"
 publishDir = "public"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
