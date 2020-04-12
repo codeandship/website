@@ -2,7 +2,7 @@
 # Twitter:      https://twitter.com/gohugoio
 # Website:      https://gohugo.io/
 
-FROM klakegg/hugo AS build
+FROM klakegg/hugo:0.69.0-busybox AS build
 
 WORKDIR /web
 
