@@ -75,3 +75,33 @@ code {
 .pagination li:after, .pagination li:before {
     background-color: white !important;
 }
+
+.show-hosts td {
+    border: none !important;
+}
+
+.show-hosts tr {
+    border-bottom: 1px solid !important;
+}
+
+.show-hosts td {
+    padding-top: 1em !important;
+}
+
+.show-hosts tr:last-child {
+    border: none !important;
+}
+
+.show-hosts table {
+    box-shadow: none !important;
+    border-collapse:collapse;
+}
+
+.show-hosts img {
+    display: inline-block !important;
+    border-radius: 20%;
+}
+
+.show-hosts img.avatar {
+    border-radius: 100%;
+}
