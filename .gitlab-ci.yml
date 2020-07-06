@@ -8,10 +8,13 @@ stages:
     - build
     - build-docker
     - deploy
-      
+
+services:
+  - docker:dind
 
 build-docker-master:
     stage: build-docker
+    image: docker:19
     tags:
         - docker
     script:
