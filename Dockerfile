@@ -12,4 +12,4 @@ RUN hugo -d /web/public
 FROM nginx:alpine 
 
 RUN rm -rf /usr/share/nginx/html/*
-COPY --from=build /target /usr/share/nginx/html/
+COPY --from=build /web/public /usr/share/nginx/html/
