@@ -9,6 +9,7 @@
      xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>{{ .Site.Title }}</title>
+    <fyyd:verify xmlns:fyyd="https://fyyd.de/fyyd-ns/">ht5tasj58i3elvoloje2G9Bnmagzlgxkmdgp3xw</fyyd:verify>
     <atom:link href="{{ .Site.BaseURL }}/index.xml" rel="self" type="application/rss+xml" />
     <link>{{ .Site.BaseURL }}/</link>
     <description>Jonathan und Ingmar sprechen übers Programmieren und Ausliefern von Software Projekten. Außerdem tauschen die beiden Bremer sich über Tools, Framewoks und das Leben als Softwareentwickler aus.</description>
